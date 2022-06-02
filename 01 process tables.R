@@ -28,7 +28,12 @@ purrr::map(.x = 1:length(fles), .f = function(i){
   tbl <- read.csv(fle)
   colnames(tbl)
   rgn <- unique(tbl$region)
-  nvl <- rep(1:50, lengh(rgn))
+  nvl <- rep(1:50, 9)
+  vrs <- unique(tbl$variable)
+  vrs
+  length(vrs)
+  
+  
   tbl <- as_tibble(tbl)
   tbl <- mutate(tbl, nivel = nvl)
   head(tbl)
