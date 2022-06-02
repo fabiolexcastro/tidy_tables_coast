@@ -19,7 +19,9 @@ i <- 1
 purrr::map(.x = 1:length(fles), .f = function(i){
   
   cat(green(basename(fles[i])), '\n')
-  fle <- fles[i]
+  fle <- fles[[i]]
+  fle <- as.character(fle)
+  tbl <- read.csv(fle)
   
   
 })
