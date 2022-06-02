@@ -18,10 +18,18 @@ i <- 1
 
 purrr::map(.x = 1:length(fles), .f = function(i){
   
+  # Filter each file
   cat(green(basename(fles[i])), '\n')
   fle <- fles[[i]]
   fle <- as.character(fle)
+  nme <- basename(fle)
+  
+  # Read as a table
   tbl <- read.csv(fle)
   
+  
+  
+  
+  cat(green('Done!'), '\n')
   
 })
