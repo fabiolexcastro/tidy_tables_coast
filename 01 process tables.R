@@ -52,7 +52,7 @@ purrr::map(.x = 1:length(fles), .f = function(i){
   
   # Get the dates
   dte <- str_split(nme, pattern = '_')
-  dte <- dte[[2]]
+  dte <- dte[[1]][2]
   
   
   
