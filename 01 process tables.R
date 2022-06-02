@@ -53,7 +53,13 @@ purrr::map(.x = 1:length(fles), .f = function(i){
   # Get the dates
   dte <- str_split(nme, pattern = '_')
   dte <- dte[[1]][2]
+  dte <- str_sub(dte, start = 1, end = 6)
+  yea <- str_sub(dte, start = 1, end = 4)
+  mnt <- str_sub(dte, start = 5, end = 6)
   
+  # Add as a column 
+  tbl <- mutate(tbl, year = yea, month = mnt)
+  head(tbl)
   
   
   cat(green('Done!'), '\n')
