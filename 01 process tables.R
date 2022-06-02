@@ -49,8 +49,10 @@ purrr::map(.x = 1:length(fles), .f = function(i){
   nvl <- rep(1:50, lng)
   tbl <- as_tibble(tbl)
   tbl <- mutate(tbl, nivel = nvl)
-  head(tbl)
   
+  # Get the dates
+  dte <- str_split(nme, pattern = '_')
+  dte <- dte[[2]]
   
   
   
