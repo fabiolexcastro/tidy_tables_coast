@@ -27,6 +27,8 @@ purrr::map(.x = 1:length(fles), .f = function(i){
   # Read as a table
   tbl <- read.csv(fle)
   colnames(tbl)
+  rgn <- unique(tbl$region)
+  rgn
   dim(tbl)
   
   
