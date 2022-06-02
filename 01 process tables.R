@@ -2,7 +2,7 @@
 
 # Load libraries ====================
 require(pacman)
-pacman::p_load(terra, sf, tidyverse, gtools, glue, fs)
+pacman::p_load(terra, sf, crayon, tidyverse, gtools, glue, fs)
 
 # Load data =========================
 path <- '../tbl'
@@ -11,3 +11,15 @@ fles <- as.character(fles)
 
 fles
 length(fles)
+
+# To add the date ==================
+
+i <- 1
+
+purrr::map(.x = 1:length(fles), .f = function(i){
+  
+  cat(green(basename(fles[i])), '\n')
+  fle <- fles[i]
+  
+  
+})
