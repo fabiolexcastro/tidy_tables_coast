@@ -60,7 +60,8 @@ tbls <- purrr::map(.x = 1:length(fles), .f = function(i){
   # Add as a column 
   tbl <- mutate(tbl, year = yea, month = mnt)
   head(tbl)
-  return(tbl)
   cat(green('Done!'), '\n')
+  return(tbl)
+
   
 })
