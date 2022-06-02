@@ -45,9 +45,8 @@ purrr::map(.x = 1:length(fles), .f = function(i){
     ungroup() %>% 
     as.data.frame()
   
-  smm
-  glb
-  
+  lng <- sum(glb$count) / 50
+  lng
   
   
   tbl <- as_tibble(tbl)
