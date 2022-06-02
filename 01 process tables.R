@@ -33,6 +33,11 @@ purrr::map(.x = 1:length(fles), .f = function(i){
   vrs
   length(vrs)
   
+  tbl %>% 
+    group_by(variable, region) %>% 
+    dplyr::summarise(count = n()) %>% 
+    ungroup()
+  
   
   tbl <- as_tibble(tbl)
   tbl <- mutate(tbl, nivel = nvl)
