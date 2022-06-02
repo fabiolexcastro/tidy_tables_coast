@@ -16,7 +16,7 @@ length(fles)
 
 i <- 1
 
-purrr::map(.x = 1:length(fles), .f = function(i){
+tbls <- purrr::map(.x = 1:length(fles), .f = function(i){
   
   # Filter each file
   cat(green(basename(fles[i])), '\n')
@@ -60,8 +60,7 @@ purrr::map(.x = 1:length(fles), .f = function(i){
   # Add as a column 
   tbl <- mutate(tbl, year = yea, month = mnt)
   head(tbl)
-  
-  
+  return(tbl)
   cat(green('Done!'), '\n')
   
 })
