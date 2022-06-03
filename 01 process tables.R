@@ -65,3 +65,8 @@ tbls <- purrr::map(.x = 1:length(fles), .f = function(i){
 
   
 })
+
+allt <- bind_rows(tbls)
+dir.create('../result')
+write.csv(allt, '../result/all_tablas.csv', row.names = FALSE)
+
